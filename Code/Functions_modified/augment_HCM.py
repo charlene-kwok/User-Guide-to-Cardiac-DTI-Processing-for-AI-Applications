@@ -176,7 +176,7 @@ def resize_images(X_train,X_test):
     return np.array(new_X_train),np.array(new_X_test)
 
 
-def build_model_cnn(patience,start_from):
+def build_cnn(patience,start_from):
     '''
     choose your model architecture here
 
@@ -205,7 +205,7 @@ def build_model_cnn(patience,start_from):
     return model, callback
 
     
-def train_model(model, callback, data, epochs):
+def train_cnn(model, callback, data, epochs):
     '''trains model and evalutes
     
     Inputs:
@@ -233,7 +233,7 @@ def train_model(model, callback, data, epochs):
     return history,info_df
 
     
-def plotHistory(history):
+def plot_history(history):
     '''
     pass in history from run_model to plot accuracy and loss vs epoch for training and validation
     '''
@@ -499,7 +499,7 @@ cbar.set_label('Convolutional Layer Activation',size=14)
 cbar.ax.tick_params(labelsize=12)
 plt.show()
 
-def predict_and_visualize(model, X_test, y_test):
+def predict_and_visualise(model, X_test, y_test):
     # Predict the classes of test images
     predictions = model.predict(X_test)
     predicted_classes = np.argmax(predictions, axis=1)
@@ -508,7 +508,7 @@ def predict_and_visualize(model, X_test, y_test):
     return predicted_classes, true_classes, predictions
 
 
-def visualize_predictions(X_test, predicted_classes, true_classes):
+def visualise_predictions(X_test, predicted_classes, true_classes):
   """
   Visualizes all images from X_test along with predicted and true classes.
 
@@ -547,5 +547,5 @@ def visualize_predictions(X_test, predicted_classes, true_classes):
   plt.show()
 
 # Predict and visualize
-predicted_classes, true_classes, predictions = predict_and_visualize(model, X_test, y_test)
-visualize_predictions(X_test, predicted_classes, true_classes)
+predicted_classes, true_classes, predictions = predict_and_visualise(model, X_test, y_test)
+visualise_predictions(X_test, predicted_classes, true_classes)
