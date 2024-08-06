@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 22 16:49:08 2024
-
-@author: charlene
-"""
+#cGAN using MNIST data for testing
 
 import torch
 import torch.nn as nn
