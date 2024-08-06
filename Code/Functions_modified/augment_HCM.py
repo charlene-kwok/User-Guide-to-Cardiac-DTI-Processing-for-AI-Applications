@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 30 16:21:57 2024
-
-@author: charlene
-"""
-
-#AI Functions
+#Using AI Functions and testing augmenting HCM data
 import import_functions
 import helper_functions
 import unwrap_functions
