@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jul 22 13:45:00 2024
-
-@author: charlene
-"""
+#cGAN and CNN testing
 import import_functions
 import helper_functions
 import unwrap_functions
@@ -618,7 +612,7 @@ history,info = train_model(model,callback,data,epochs)
 # cbar.ax.tick_params(labelsize=12)
 # plt.show()
 
-def predict_and_visualize(model, X_test, y_test):
+def predict_and_visualise(model, X_test, y_test):
     # Predict the classes of test images
     predictions = model.predict(X_test)
     predicted_classes = np.argmax(predictions, axis=1)
@@ -626,7 +620,7 @@ def predict_and_visualize(model, X_test, y_test):
 
     return predicted_classes, true_classes
 
-def visualize_predictions(X_test, predicted_classes, true_classes, num_images=10):
+def visualise_predictions(X_test, predicted_classes, true_classes, num_images=10):
     indices = np.random.choice(len(X_test), num_images, replace=False)
 
     fig, axes = plt.subplots(num_images, 3, figsize=(12, 2 * num_images))
@@ -704,9 +698,9 @@ history = train_cgan(generator, discriminator, cgan, data, labels, epochs=100, b
 X_test_fake,y_test_fake = generate_fake_images(generator, num_images_to_display)
 
 # Predict on the test set
-predicted_classes2, true_classes2 = predict_and_visualize(model, X_test_fake, y_test_fake)
+predicted_classes2, true_classes2 = predict_and_visualise(model, X_test_fake, y_test_fake)
 
-# Visualize a subset of test images with predictions
-visualize_predictions(X_test_fake, predicted_classes2, true_classes2, num_images=10)
+# Visualise a subset of test images with predictions
+visualise_predictions(X_test_fake, predicted_classes2, true_classes2, num_images=10)
 
 
