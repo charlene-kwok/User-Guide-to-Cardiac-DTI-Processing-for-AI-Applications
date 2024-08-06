@@ -570,7 +570,6 @@ def generate_fake_images(generator, num_samples):
 '''
 Example code
 
-'''
 param = 'E2A'
 health = 'HCM'
 method = 'STEAM'
@@ -697,8 +696,8 @@ X_test_fake,y_test_fake = generate_fake_images(generator, num_images_to_display)
 # Predict on the test set
 predicted_classes2, true_classes2 = predict_and_visualise(model, X_test_fake, y_test_fake)
 
-# Visualize a subset of test images with predictions
+# Visualise a subset of test images with predictions
 visualise_predictions(X_test_fake, predicted_classes2, true_classes2)
-
+'''
 
 
