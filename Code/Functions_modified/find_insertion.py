@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 16 16:18:53 2024
-
-@author: charlene
-"""
+#find_insertion
 
 import import_functions
 import helper_functions
